@@ -673,3 +673,114 @@ footer {
   .contact-hero-overlay { padding: 32px 20px; }
   .contact-form-panel { padding: 28px 20px; }
 }
+
+/* ── GALLERY INTRO ── */
+.gallery-intro {
+  text-align: center;
+  padding: 52px 48px 36px;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-intro-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.gallery-intro-text {
+  font-size: 15px;
+  color: var(--text-light);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── MASONRY GRID ── */
+.masonry-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 3px;
+  background: #f0f0f0;
+}
+
+.masonry-row {
+  display: flex;
+  gap: 3px;
+  height: 420px;
+}
+
+.masonry-thirds {
+  height: 320px;
+}
+
+.masonry-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.masonry-tile {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  flex: 1;
+}
+
+.masonry-large {
+  flex: 2;
+}
+
+.masonry-tile .img-placeholder {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.masonry-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.masonry-tile:hover .img-placeholder,
+.masonry-tile:hover img {
+  transform: scale(1.04);
+}
+
+.masonry-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 20px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.masonry-tile:hover .masonry-label {
+  opacity: 1;
+}
+
+/* ── MASONRY MOBILE ── */
+@media (max-width: 768px) {
+  .masonry-row { height: auto; flex-direction: column; }
+  .masonry-large { flex: none; height: 280px; }
+  .masonry-col { flex-direction: row; height: 180px; }
+  .masonry-thirds { height: auto; flex-direction: column; }
+  .masonry-thirds .masonry-tile { height: 220px; flex: none; }
+  .masonry-label { opacity: 1; }
+  .gallery-intro { padding: 32px 20px 24px; }
+}
