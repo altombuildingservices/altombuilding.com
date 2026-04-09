@@ -196,11 +196,13 @@ nav { display: flex; flex: 1; align-items: stretch; }
 .trust-strip {
   background: #f7f9fc;
   border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
   display: flex;
-  justify-content: center;
-  gap: 48px;
-  padding: 16px 36px;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 36px;
+  flex-wrap: nowrap;
+  gap: 16px;
 }
 
 .trust-item {
@@ -209,13 +211,15 @@ nav { display: flex; flex: 1; align-items: stretch; }
   gap: 10px;
   font-size: 13px;
   color: var(--text-light);
+  white-space: nowrap;
 }
 
 .trust-item strong {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--blue);
   font-family: 'Playfair Display', serif;
+  margin-right: 4px;
 }
 
 
