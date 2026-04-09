@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kitchen — ALTOM Building Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,14 +22,12 @@
   </div>
 
   <header class="header-modern">
-    <a href="/" class="logo-modern">
-      <img src="logo.png" alt="ALTOM Building Services">
-    </a>
+    <a href="/" class="logo-modern"><img src="logo.png" alt="ALTOM Building Services"></a>
     <nav class="nav-modern">
       <ul>
         <li><a href="/">Home</a></li>
         <li class="dropdown">
-          <a href="/gallery">Gallery</a>
+          <a href="/gallery" class="active">Gallery</a>
           <div class="dropdown-menu">
             <a href="/gallery-kitchen">Kitchen</a>
             <a href="/gallery-bathroom">Bathroom</a>
@@ -48,34 +46,45 @@
     </nav>
   </header>
 
-  <div class="page-wrapper">
-    <main>
-      <div class="ghost-heading">kitchen</div>
-      <div class="project-content">
-        <!-- Replace with actual project photo -->
-        <div class="img-placeholder project-img" style="height:500px;">
-          Project photo — replace with actual JPEG
-        </div>
-        <p class="project-notes">
-          Project notes: Removal of existing cabinetry, island, appliances, and drywall to studs. Island reoriented and repositioned. New drywall, cabinetry, backsplash, plumbing, flooring, lighting, and appliances installed throughout.
-        </p>
-      </div>
-    </main>
+  <section class="project-hero">
+    <div class="img-placeholder project-hero-img">Project photo — replace with actual JPEG</div>
+    <div class="project-hero-overlay">
+      <div class="project-hero-breadcrumb"><a href="/gallery">Gallery</a> / Kitchen</div>
+      <h1>Kitchen</h1>
+    </div>
+  </section>
 
-    <aside class="sidebar">
-      <ul class="sidebar-links">
-        <li><a href="/gallery-kitchen"><strong>kitchen</strong></a></li>
-        <li><a href="/gallery-bathroom">bathroom</a></li>
-        <li><a href="/gallery-shower">shower</a></li>
-        <li><a href="/gallery-living-room">living room</a></li>
-        <li><a href="/gallery-home-office">home office</a></li>
-        <li><a href="/gallery-entertainment">entertainment wall</a></li>
-        <li><a href="/gallery-closet">closet</a></li>
-        <li><a href="/gallery-laundry">laundry</a></li>
-        <li><a href="/gallery-outdoor">outdoor living</a></li>
-      </ul>
-    </aside>
-  </div>
+  <section class="project-body">
+    <div class="project-body-inner">
+      <div class="project-notes-modern">
+        <p class="project-notes-label">Project Notes</p>
+        <p>Removal of existing cabinetry, island, appliances, and drywall to studs. Island reoriented and repositioned. New drywall, cabinetry, backsplash, plumbing, flooring, lighting, and appliances installed throughout.</p>
+      </div>
+      <div class="project-nav-links">
+        <p class="project-notes-label">Browse Categories</p>
+        <div class="project-category-links">
+          <a href="/gallery-kitchen">Kitchen</a>
+          <a href="/gallery-bathroom">Bathroom</a>
+          <a href="/gallery-shower">Shower</a>
+          <a href="/gallery-living-room">Living Room</a>
+          <a href="/gallery-home-office">Home Office</a>
+          <a href="/gallery-entertainment">Entertainment Wall</a>
+          <a href="/gallery-closet">Closet</a>
+          <a href="/gallery-laundry">Laundry</a>
+          <a href="/gallery-outdoor">Outdoor Living</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta-banner">
+    <h2>Ready to start your project?</h2>
+    <p>Get in touch today and Tom will get back to you.</p>
+    <a href="/contact" class="cta-modern">
+      Get a Quote
+      <svg width="16" height="16" viewBox="0 0 24 24" style="fill:currentColor;margin-left:8px;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+    </a>
+  </section>
 
   <footer>
     &copy; 2026 ALTOM Building Services &nbsp;|&nbsp; +1 (602) 807-2301 &nbsp;|&nbsp; tom@altombuilding.com

@@ -973,3 +973,107 @@ footer {
 @media (max-width: 480px) {
   .about-why-grid { grid-template-columns: 1fr; }
 }
+
+/* ── PROJECT / SUB-GALLERY PAGES ── */
+.project-hero {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.project-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(0,0,0,0.65) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 72px;
+}
+
+.project-hero-breadcrumb {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 10px;
+}
+
+.project-hero-breadcrumb a {
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s;
+}
+
+.project-hero-breadcrumb a:hover { color: white; }
+
+.project-hero-overlay h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+}
+
+.project-body {
+  padding: 56px 72px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-body-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.project-notes-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.project-notes-modern p:last-child {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.project-category-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-category-links a {
+  font-size: 13px;
+  color: var(--text-light);
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.project-category-links a:hover {
+  color: var(--blue);
+  padding-left: 6px;
+}
+
+@media (max-width: 768px) {
+  .project-hero { height: 300px; }
+  .project-hero-overlay { padding: 24px 24px; }
+  .project-body { padding: 36px 24px; }
+  .project-body-inner { grid-template-columns: 1fr; gap: 36px; }
+  .project-category-links { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  .project-category-links a { border-bottom: none; background: #f0f5fb; padding: 6px 12px; }
+  .project-category-links a:hover { padding-left: 12px; }
+}
