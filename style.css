@@ -40,12 +40,6 @@ a { text-decoration: none; color: inherit; }
 
 .top-bar a:hover { color: var(--white); }
 
-.top-bar svg {
-  width: 13px;
-  height: 13px;
-  fill: rgba(255,255,255,0.7);
-  flex-shrink: 0;
-}
 
 /* ── HEADER ── */
 header {
@@ -224,12 +218,7 @@ nav { display: flex; flex: 1; align-items: stretch; }
   font-family: 'Playfair Display', serif;
 }
 
-.trust-item svg {
-  width: 22px;
-  height: 22px;
-  fill: var(--blue);
-  flex-shrink: 0;
-}
+
 
 /* ── SIDEBAR ── */
 .sidebar {
