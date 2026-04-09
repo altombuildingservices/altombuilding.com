@@ -30,7 +30,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7px 48px;
+  padding: 7px 20px;
   font-size: 12px;
   gap: 24px;
 }
