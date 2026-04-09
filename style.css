@@ -14,7 +14,12 @@ body {
   font-weight: 300;
   color: var(--text);
   background: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+footer { margin-top: auto; }
 
 a { text-decoration: none; color: inherit; }
 
