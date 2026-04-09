@@ -35,7 +35,11 @@ header {
   padding: 10px 20px;
   min-width: 220px;
   border-right: 1px solid #e8e8e8;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.logo-area:hover { background: #fafafa; }
 
 .logo-area img {
   width: 60px;
