@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — ALTOM Building Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- TOP BAR -->
   <div class="top-bar">
     <a href="tel:6028072301">
       <svg width="13" height="13" viewBox="0 0 24 24" style="fill:rgba(255,255,255,0.8);flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.57 1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
@@ -21,6 +22,7 @@
     </a>
   </div>
 
+  <!-- HEADER -->
   <header class="header-modern">
     <a href="/" class="logo-modern">
       <img src="logo.png" alt="ALTOM Building Services">
@@ -42,44 +44,102 @@
             <a href="/gallery-outdoor">Outdoor Living</a>
           </div>
         </li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/about" class="active">About</a></li>
         <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="page-wrapper">
-    <main>
-      <div class="ghost-heading">Meet Tom</div>
-      <div class="about-content">
-        <div>
-          <!-- Replace with actual photo of Tom -->
-          <div class="img-placeholder" style="height:380px;">Tom's photo</div>
-        </div>
-        <div class="about-text">
-          <!-- Replace with Tom's actual bio -->
-          <p>Tom Jarosiewicz is the founder and lead contractor of ALTOM Building Services, bringing years of hands-on experience in residential remodeling and renovation to every project he takes on.</p>
-          <p>From full kitchen and bathroom renovations to whole-home remodels, Tom approaches each job with the same commitment to quality craftsmanship and clear communication. He works closely with homeowners from the first consultation through to the final walkthrough, ensuring the finished result matches the vision.</p>
-          <p>Based in the Phoenix area, Tom has built a reputation for reliable, high-quality work and straightforward pricing. Whether you have a clear plan in mind or just an idea of what you want, he'll work with you to make it happen.</p>
+  <!-- MEET TOM -->
+  <section class="about-meet">
+    <div class="about-section-label">Meet the Team</div>
+    <div class="about-meet-grid">
+
+      <!-- Tom's photo card -->
+      <div class="about-profile-card">
+        <div class="img-placeholder about-profile-img">Tom's photo</div>
+        <div class="about-profile-overlay">
+          <p class="about-profile-name">Tom Jarosiewicz</p>
+          <p class="about-profile-title">Founder & Lead Contractor</p>
         </div>
       </div>
-    </main>
 
-    <aside class="sidebar">
-      <ul class="sidebar-links">
-        <li><a href="/gallery-kitchen">kitchen</a></li>
-        <li><a href="/gallery-bathroom">bathroom</a></li>
-        <li><a href="/gallery-shower">shower</a></li>
-        <li><a href="/gallery-living-room">living room</a></li>
-        <li><a href="/gallery-home-office">home office</a></li>
-        <li><a href="/gallery-entertainment">entertainment wall</a></li>
-        <li><a href="/gallery-closet">closet</a></li>
-        <li><a href="/gallery-laundry">laundry</a></li>
-        <li><a href="/gallery-outdoor">outdoor living</a></li>
-      </ul>
-    </aside>
-  </div>
+      <!-- Bio text -->
+      <div class="about-bio">
+        <h2>Your friend<br>in the business</h2>
+        <p>Tom Jarosiewicz is the founder and lead contractor of ALTOM Building Services, bringing years of hands-on experience in residential remodeling and renovation to every project he takes on.</p>
+        <p>From full kitchen and bathroom renovations to whole-home remodels, Tom approaches each job with the same commitment to quality craftsmanship and clear communication. He works closely with homeowners from the first consultation through to the final walkthrough, ensuring the finished result matches the vision.</p>
+        <p>Based in the Phoenix Metro area, Tom has built a reputation for reliable, high-quality work and straightforward pricing. Whether you have a clear plan in mind or just an idea of what you want, he'll work with you to make it happen.</p>
+        <a href="/contact" class="cta-modern" style="margin-top:12px;">
+          Get in Touch
+          <svg width="16" height="16" viewBox="0 0 24 24" style="fill:currentColor;margin-left:8px;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
 
+    </div>
+  </section>
+
+  <!-- ABOUT ALTOM -->
+  <section class="about-company">
+    <div class="about-section-label">About Us</div>
+    <div class="about-company-grid">
+      <div class="about-company-text">
+        <p>ALTOM Building Services is a Phoenix-based general contracting company specialising in residential remodeling. We work with a trusted network of skilled tradespeople — plumbers, electricians, tilers, carpenters, and finishing specialists — to deliver complete projects under one roof.</p>
+        <p>Every project is contractor-led from start to finish. That means clear timelines, honest pricing, and a single point of contact throughout. No surprises, no subcontractor runaround.</p>
+      </div>
+      <div class="about-company-text">
+        <p>We don't just manage projects — we build relationships. Many of our clients come back to us for their next renovation, and most of our new work comes through personal referrals. That track record is something we're proud of and something we work hard to maintain on every job.</p>
+        <p>From a single bathroom refresh to a full whole-home transformation, we bring the same level of care and attention to every project regardless of scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="about-why">
+    <div class="about-section-label">Why Choose ALTOM</div>
+    <div class="about-why-grid">
+      <div class="about-why-item">
+        <div class="about-why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" style="fill:#1b75bb;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Contractor Led</h3>
+        <p>Built by craftspeople who can, led by professionals who care. Tom is on every job site, not just on the phone.</p>
+      </div>
+      <div class="about-why-item">
+        <div class="about-why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" style="fill:#1b75bb;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Trusted Network</h3>
+        <p>We work with a vetted team of licensed tradespeople built up over years of project experience in the Phoenix area.</p>
+      </div>
+      <div class="about-why-item">
+        <div class="about-why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" style="fill:#1b75bb;"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3>Clear Communication</h3>
+        <p>One point of contact from first call to final walkthrough. No subcontractor runaround, no chasing for updates.</p>
+      </div>
+      <div class="about-why-item">
+        <div class="about-why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" style="fill:#1b75bb;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <h3>Honest Pricing</h3>
+        <p>Detailed quotes upfront with no hidden costs. We work within your budget and flag any changes before they happen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="about-cta-banner">
+    <h2>Ready to start your project?</h2>
+    <p>Get in touch today and Tom will get back to you within one business day.</p>
+    <a href="/contact" class="cta-modern">
+      Get a Free Quote
+      <svg width="16" height="16" viewBox="0 0 24 24" style="fill:currentColor;margin-left:8px;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     &copy; 2026 ALTOM Building Services &nbsp;|&nbsp; +1 (602) 807-2301 &nbsp;|&nbsp; tom@altombuilding.com
   </footer>
