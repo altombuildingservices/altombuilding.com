@@ -182,18 +182,20 @@ a { text-decoration: none; color: inherit; }
 /* ── TRUST STRIP ── */
 .trust-strip {
   display: flex;
-  justify-content: space-around;
+  justify-content: stretch;
   align-items: center;
   padding: 28px 3%;
   background: #f7f9fc;
   border-bottom: 1px solid #e8e8e8;
   flex-wrap: nowrap;
-  gap: 16px;
+  gap: 0;
 }
 
 .trust-item {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 13px;
   color: var(--text-light);
