@@ -1226,7 +1226,7 @@ footer {
   padding: 0 12%;
 }
 
-.home-gallery .masonry-row { height: 320px; }
-.home-gallery .masonry-thirds { height: 260px; }
+.home-gallery .masonry-row { height: 460px; }
+.home-gallery .masonry-thirds { height: 400px; }
 .home-gallery .masonry-label { opacity: 0; }
 .home-gallery .masonry-tile:hover .masonry-label { opacity: 1; }
