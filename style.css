@@ -225,6 +225,7 @@ a { text-decoration: none; color: inherit; }
 
 .service-item {
   padding: 36px 3%;
+  text-align: center;
 }
 
 .service-item h3 {
@@ -234,12 +235,14 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.05em;
   margin-bottom: 8px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .service-item p {
   font-size: 13px;
   line-height: 1.65;
   color: var(--text-light);
+  text-align: center;
 }
 
 /* ── PAGE WRAPPER (gallery/about/contact inner pages) ── */
