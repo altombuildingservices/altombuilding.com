@@ -868,6 +868,7 @@ footer {
   line-height: 1.85;
   color: var(--text-light);
   margin-bottom: 16px;
+  text-align: justify;
 }
 
 /* About company */
@@ -934,6 +935,7 @@ footer {
   font-size: 13px;
   line-height: 1.7;
   color: var(--text-light);
+  text-align: justify;
 }
 
 /* CTA Banner */
