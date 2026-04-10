@@ -890,6 +890,7 @@ footer {
   line-height: 1.85;
   color: var(--text-light);
   margin-bottom: 16px;
+  text-align: justify;
 }
 
 /* Why choose us */
