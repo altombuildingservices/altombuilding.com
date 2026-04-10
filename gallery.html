@@ -6,7 +6,19 @@
   <title>Gallery — ALTOM Building Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    .pg { padding: 0 12% 64px; display: flex; flex-direction: column; gap: 10px; background: white; }
+    .pr { display: grid; gap: 10px; }
+    .pr-a { grid-template-columns: 2fr 1fr; height: 480px; } /* large left, col right */
+    .pr-b { grid-template-columns: 1fr 1fr 1fr; height: 380px; } /* equal thirds */
+    .pr-c { grid-template-columns: 1fr 2fr; height: 480px; } /* col left, large right */
+    .pc { display: grid; grid-template-rows: 1fr 1fr; gap: 10px; }
+    .pt { overflow: hidden; position: relative; background: #d0dce8; }
+    .pt .img-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8aaac4; letter-spacing: 0.1em; }
+    .pt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pt:hover .img-placeholder, .pt:hover img { transform: scale(1.03); transition: transform 0.4s ease; }
+  </style>
 </head>
 <body>
 
@@ -33,76 +45,48 @@
     </nav>
   </header>
 
-  <!-- GALLERY INTRO -->
   <div class="gallery-intro">
     <p class="gallery-intro-label">Projects Gallery</p>
     <p class="gallery-intro-text">A selection of our completed work across kitchens, bathrooms, living spaces, and more.</p>
   </div>
 
-  <!-- PHOTO GRID -->
-  <!-- To add photos: copy any .gallery-photo-tile block and update the img src -->
-  <!-- To add a placeholder: use <div class="img-placeholder gallery-photo-tile"> -->
-  <div class="photo-grid">
+  <!-- PHOTO GRID — add photos by replacing img-placeholder divs with <img src="..."> -->
+  <div class="pg">
 
-    <!-- Row 1: large left, small right -->
-    <div class="photo-row">
-      <div class="photo-tile photo-large">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 01</div>
-      </div>
-      <div class="photo-col">
-        <div class="photo-tile">
-          <div class="img-placeholder" style="width:100%;height:100%;">photo 02</div>
-        </div>
-        <div class="photo-tile">
-          <div class="img-placeholder" style="width:100%;height:100%;">photo 03</div>
-        </div>
+    <!-- Row 1: large left (2fr), two stacked right (1fr) -->
+    <div class="pr pr-a">
+      <div class="pt"><div class="img-placeholder">photo 01</div></div>
+      <div class="pc">
+        <div class="pt"><div class="img-placeholder">photo 02</div></div>
+        <div class="pt"><div class="img-placeholder">photo 03</div></div>
       </div>
     </div>
 
     <!-- Row 2: three equal -->
-    <div class="photo-row photo-thirds">
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 04</div>
-      </div>
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 05</div>
-      </div>
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 06</div>
-      </div>
+    <div class="pr pr-b">
+      <div class="pt"><div class="img-placeholder">photo 04</div></div>
+      <div class="pt"><div class="img-placeholder">photo 05</div></div>
+      <div class="pt"><div class="img-placeholder">photo 06</div></div>
     </div>
 
-    <!-- Row 3: small left, large right -->
-    <div class="photo-row photo-row-reverse">
-      <div class="photo-col">
-        <div class="photo-tile">
-          <div class="img-placeholder" style="width:100%;height:100%;">photo 07</div>
-        </div>
-        <div class="photo-tile">
-          <div class="img-placeholder" style="width:100%;height:100%;">photo 08</div>
-        </div>
+    <!-- Row 3: two stacked left (1fr), large right (2fr) -->
+    <div class="pr pr-c">
+      <div class="pc">
+        <div class="pt"><div class="img-placeholder">photo 07</div></div>
+        <div class="pt"><div class="img-placeholder">photo 08</div></div>
       </div>
-      <div class="photo-tile photo-large">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 09</div>
-      </div>
+      <div class="pt"><div class="img-placeholder">photo 09</div></div>
     </div>
 
     <!-- Row 4: three equal -->
-    <div class="photo-row photo-thirds">
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 10</div>
-      </div>
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 11</div>
-      </div>
-      <div class="photo-tile">
-        <div class="img-placeholder" style="width:100%;height:100%;">photo 12</div>
-      </div>
+    <div class="pr pr-b">
+      <div class="pt"><div class="img-placeholder">photo 10</div></div>
+      <div class="pt"><div class="img-placeholder">photo 11</div></div>
+      <div class="pt"><div class="img-placeholder">photo 12</div></div>
     </div>
 
   </div>
 
-  <!-- CTA BANNER -->
   <section class="about-cta-banner">
     <h2>Ready to start your project?</h2>
     <p>Get in touch today and Tom will get back to you.</p>
