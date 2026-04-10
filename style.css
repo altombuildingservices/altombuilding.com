@@ -1391,3 +1391,231 @@ footer {
   .gallery-sub-nav { padding: 0; }
   .gsn-link { padding: 14px 14px; font-size: 11px; letter-spacing: 0.08em; }
 }
+
+/* ============================================================
+   MOBILE — COMPREHENSIVE OVERRIDES
+   Desktop CSS is untouched. These rules only fire below 768px.
+   ============================================================ */
+
+/* ── HAMBURGER BUTTON ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+
+.nav-hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+
+  /* ── HEADER ── */
+  .header-modern {
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .nav-hamburger { display: flex; }
+
+  /* Nav slides down when open */
+  .nav-modern {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #eee;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+
+  .nav-modern.nav-open { display: block; }
+
+  .nav-modern ul {
+    flex-direction: column;
+    padding: 12px 0;
+    gap: 0;
+  }
+
+  .nav-modern ul li { width: 100%; }
+
+  .nav-modern a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+    color: var(--text);
+  }
+
+  .nav-modern a:last-child { border-bottom: none; }
+
+  .nav-cta {
+    display: block !important;
+    margin: 12px 24px;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  /* ── HOMEPAGE HERO ── */
+  .hero-fullvh {
+    height: 85vh !important;
+    min-height: 480px;
+  }
+
+  .hero-modern-content {
+    padding: 0 28px;
+  }
+
+  .hero-modern-content h1 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  /* ── HOME INTRO ── */
+  .home-intro-wrapper { padding: 0; }
+
+  .home-intro {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 20px;
+  }
+
+  .home-intro-left,
+  .home-intro-right { max-width: 100%; }
+
+  .home-intro-left h2 { font-size: clamp(18px, 5vw, 26px); }
+
+  .home-intro-btns { flex-direction: column; gap: 10px; }
+  .intro-btn { text-align: center; }
+
+  /* ── HOME GALLERY GRID ── */
+  /* Override the inline-style grid with a simple 2-col layout */
+  div[style*="grid-template-columns:repeat(6"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 180px !important;
+    padding: 0 16px 40px !important;
+    gap: 8px !important;
+  }
+
+  /* Reset all tile spanning so every tile is equal */
+  div[style*="grid-template-columns:repeat(6"] a {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .trust-item {
+    flex: 0 0 calc(50% - 16px);
+    justify-content: center;
+  }
+
+  .trust-divider { display: none; }
+
+  /* ── SERVICES STRIP ── */
+  .services-strip {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px 20px;
+    gap: 24px;
+  }
+
+  /* ── GALLERY SUB-NAV ── */
+  .gallery-sub-nav { padding: 0; }
+  .gsn-link { padding: 12px 12px; font-size: 11px; }
+
+  /* ── GALLERY CATEGORY GRID ── */
+  .sg-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 160px !important;
+    padding: 20px 16px 40px !important;
+    gap: 8px !important;
+  }
+
+  .sg-p1, .sg-p2, .sg-p3,
+  .sg-p4, .sg-p5, .sg-p6 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* ── ABOUT PAGE ── */
+  .about-meet { padding: 40px 20px; }
+  .about-meet-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-profile-card { height: 340px; }
+  .about-bio h2 { font-size: clamp(22px, 6vw, 32px); }
+
+  /* ── CONTACT PAGE ── */
+  .contact-hero-overlay {
+    grid-template-columns: 1fr;
+    padding: 60px 24px 40px;
+    gap: 32px;
+    overflow-y: auto;
+    justify-items: stretch;
+  }
+
+  .contact-hero-left { text-align: left; }
+  .contact-hero-left h1 { font-size: clamp(24px, 7vw, 36px); }
+  .contact-form-panel { width: 100%; }
+
+  /* ── FOOTER ── */
+  footer {
+    font-size: 11px;
+    padding: 16px 20px;
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ── TRUST ── */
+  .trust-item { flex: 0 0 100%; }
+
+  /* ── SERVICES ── */
+  .services-strip { grid-template-columns: 1fr; }
+
+  /* ── HOME GALLERY ── */
+  div[style*="grid-template-columns:repeat(6"] {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 200px !important;
+  }
+
+  /* ── GALLERY CATEGORY GRID ── */
+  .sg-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 200px !important;
+  }
+
+  /* ── CONTACT ── */
+  .contact-hero-overlay { padding: 48px 16px 32px; }
+  .contact-form-panel { padding: 28px 20px; }
+}
