@@ -1619,3 +1619,46 @@ footer {
   .contact-hero-overlay { padding: 48px 16px 32px; }
   .contact-form-panel { padding: 28px 20px; }
 }
+
+/* ── HOME GALLERY GRID (classed, replaces inline styles) ── */
+.hg-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 240px;
+  gap: 10px;
+  padding: 0 12% 64px;
+  background: white;
+}
+
+.hg-kitchen       { grid-column: 1 / span 4; grid-row: 1 / span 2; }
+.hg-bathroom      { grid-column: 5 / span 2; grid-row: 1; }
+.hg-shower        { grid-column: 5 / span 2; grid-row: 2; }
+.hg-living        { grid-column: 1 / span 2; grid-row: 3; }
+.hg-office        { grid-column: 1 / span 2; grid-row: 4; }
+.hg-entertainment { grid-column: 3 / span 4; grid-row: 3 / span 2; }
+.hg-closet        { grid-column: 1 / span 2; grid-row: 5 / span 2; }
+.hg-laundry       { grid-column: 3 / span 2; grid-row: 5 / span 2; }
+.hg-outdoor       { grid-column: 5 / span 2; grid-row: 5 / span 2; }
+
+@media (max-width: 768px) {
+  .hg-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px;
+    padding: 0 16px 40px;
+    gap: 8px;
+  }
+
+  .hg-kitchen, .hg-bathroom, .hg-shower,
+  .hg-living, .hg-office, .hg-entertainment,
+  .hg-closet, .hg-laundry, .hg-outdoor {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hg-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+}
