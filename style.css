@@ -793,7 +793,7 @@ footer {
 
 /* Meet Tom */
 .about-meet {
-  padding: 64px 72px;
+  padding: 64px 3%;
   border-bottom: 1px solid #eee;
 }
 
@@ -859,7 +859,7 @@ footer {
 
 /* About company */
 .about-company {
-  padding: 64px 72px;
+  padding: 64px 3%;
   background: #f7f9fc;
   border-bottom: 1px solid #eee;
 }
@@ -879,7 +879,7 @@ footer {
 
 /* Why choose us */
 .about-why {
-  padding: 64px 72px;
+  padding: 64px 3%;
   border-bottom: 1px solid #eee;
 }
 
@@ -921,7 +921,7 @@ footer {
 /* CTA Banner */
 .about-cta-banner {
   background: var(--blue);
-  padding: 64px 72px;
+  padding: 64px 3%;
   text-align: center;
 }
 
