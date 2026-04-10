@@ -6,18 +6,65 @@
   <title>Gallery — ALTOM Building Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <style>
-    .pg { padding: 0 12% 64px; display: flex; flex-direction: column; gap: 10px; background: white; }
-    .pr { display: grid; gap: 10px; }
-    .pr-a { grid-template-columns: 2fr 1fr; height: 480px; } /* large left, col right */
-    .pr-b { grid-template-columns: 1fr 1fr 1fr; height: 380px; } /* equal thirds */
-    .pr-c { grid-template-columns: 1fr 2fr; height: 480px; } /* col left, large right */
-    .pc { display: grid; grid-template-rows: 1fr 1fr; gap: 10px; }
-    .pt { overflow: hidden; position: relative; background: #d0dce8; }
-    .pt .img-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8aaac4; letter-spacing: 0.1em; }
-    .pt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-    .pt:hover .img-placeholder, .pt:hover img { transform: scale(1.03); transition: transform 0.4s ease; }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 240px;
+      gap: 10px;
+      padding: 0 12% 64px;
+      background: white;
+    }
+
+    .pt {
+      overflow: hidden;
+      position: relative;
+      background: #d0dce8;
+    }
+
+    .pt .img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #8aaac4;
+      letter-spacing: 0.1em;
+    }
+
+    .pt img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .pt:hover img { transform: scale(1.03); }
+
+    /* Row 1: p01 spans 4 cols x 2 rows, p02 spans 2 cols x 1 row, p03 spans 2 cols x 1 row */
+    .p01 { grid-column: 1 / span 4; grid-row: 1 / span 2; }
+    .p02 { grid-column: 5 / span 2; grid-row: 1; }
+    .p03 { grid-column: 5 / span 2; grid-row: 2; }
+
+    /* Row 3: p04 p05 p06 each span 2 cols x 2 rows */
+    .p04 { grid-column: 1 / span 2; grid-row: 3 / span 2; }
+    .p05 { grid-column: 3 / span 2; grid-row: 3 / span 2; }
+    .p06 { grid-column: 5 / span 2; grid-row: 3 / span 2; }
+
+    /* Row 5: p07 spans 2 cols x 1 row, p08 spans 2 cols x 1 row, p09 spans 4 cols x 2 rows */
+    .p07 { grid-column: 1 / span 2; grid-row: 5; }
+    .p08 { grid-column: 1 / span 2; grid-row: 6; }
+    .p09 { grid-column: 3 / span 4; grid-row: 5 / span 2; }
+
+    /* Row 7: p10 p11 p12 each span 2 cols x 2 rows */
+    .p10 { grid-column: 1 / span 2; grid-row: 7 / span 2; }
+    .p11 { grid-column: 3 / span 2; grid-row: 7 / span 2; }
+    .p12 { grid-column: 5 / span 2; grid-row: 7 / span 2; }
   </style>
 </head>
 <body>
@@ -50,41 +97,19 @@
     <p class="gallery-intro-text">A selection of our completed work across kitchens, bathrooms, living spaces, and more.</p>
   </div>
 
-  <!-- PHOTO GRID — add photos by replacing img-placeholder divs with <img src="..."> -->
-  <div class="pg">
-
-    <!-- Row 1: large left (2fr), two stacked right (1fr) -->
-    <div class="pr pr-a">
-      <div class="pt"><div class="img-placeholder">photo 01</div></div>
-      <div class="pc">
-        <div class="pt"><div class="img-placeholder">photo 02</div></div>
-        <div class="pt"><div class="img-placeholder">photo 03</div></div>
-      </div>
-    </div>
-
-    <!-- Row 2: three equal -->
-    <div class="pr pr-b">
-      <div class="pt"><div class="img-placeholder">photo 04</div></div>
-      <div class="pt"><div class="img-placeholder">photo 05</div></div>
-      <div class="pt"><div class="img-placeholder">photo 06</div></div>
-    </div>
-
-    <!-- Row 3: two stacked left (1fr), large right (2fr) -->
-    <div class="pr pr-c">
-      <div class="pc">
-        <div class="pt"><div class="img-placeholder">photo 07</div></div>
-        <div class="pt"><div class="img-placeholder">photo 08</div></div>
-      </div>
-      <div class="pt"><div class="img-placeholder">photo 09</div></div>
-    </div>
-
-    <!-- Row 4: three equal -->
-    <div class="pr pr-b">
-      <div class="pt"><div class="img-placeholder">photo 10</div></div>
-      <div class="pt"><div class="img-placeholder">photo 11</div></div>
-      <div class="pt"><div class="img-placeholder">photo 12</div></div>
-    </div>
-
+  <div class="photo-grid">
+    <div class="pt p01"><div class="img-placeholder">photo 01</div></div>
+    <div class="pt p02"><div class="img-placeholder">photo 02</div></div>
+    <div class="pt p03"><div class="img-placeholder">photo 03</div></div>
+    <div class="pt p04"><div class="img-placeholder">photo 04</div></div>
+    <div class="pt p05"><div class="img-placeholder">photo 05</div></div>
+    <div class="pt p06"><div class="img-placeholder">photo 06</div></div>
+    <div class="pt p07"><div class="img-placeholder">photo 07</div></div>
+    <div class="pt p08"><div class="img-placeholder">photo 08</div></div>
+    <div class="pt p09"><div class="img-placeholder">photo 09</div></div>
+    <div class="pt p10"><div class="img-placeholder">photo 10</div></div>
+    <div class="pt p11"><div class="img-placeholder">photo 11</div></div>
+    <div class="pt p12"><div class="img-placeholder">photo 12</div></div>
   </div>
 
   <section class="about-cta-banner">
