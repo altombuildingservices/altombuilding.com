@@ -1509,22 +1509,6 @@ footer {
   .home-intro-btns { flex-direction: column; gap: 10px; }
   .intro-btn { text-align: center; }
 
-  /* ── HOME GALLERY GRID ── */
-  /* Override the inline-style grid with a simple 2-col layout */
-  div[style*="grid-template-columns:repeat(6"] {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    grid-auto-rows: 180px !important;
-    padding: 0 16px 40px !important;
-    gap: 8px !important;
-  }
-
-  /* Reset all tile spanning so every tile is equal */
-  div[style*="grid-template-columns:repeat(6"] a {
-    grid-column: auto !important;
-    grid-row: auto !important;
-  }
-
   /* ── TRUST STRIP ── */
   .trust-strip {
     flex-wrap: wrap;
@@ -1602,12 +1586,6 @@ footer {
 
   /* ── SERVICES ── */
   .services-strip { grid-template-columns: 1fr; }
-
-  /* ── HOME GALLERY ── */
-  div[style*="grid-template-columns:repeat(6"] {
-    grid-template-columns: 1fr !important;
-    grid-auto-rows: 200px !important;
-  }
 
   /* ── GALLERY CATEGORY GRID ── */
   .sg-grid {
