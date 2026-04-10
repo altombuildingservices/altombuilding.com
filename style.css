@@ -14,12 +14,7 @@ body {
   font-weight: 300;
   color: var(--text);
   background: var(--white);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
-
-footer { margin-top: auto; }
 
 a { text-decoration: none; color: inherit; }
 
@@ -1080,7 +1075,7 @@ footer {
 
 /* ── FULL VIEWPORT HERO ── */
 .hero-fullvh {
-  height: 100vh !important;
+  height: calc(100vh - 98px) !important;
   min-height: 600px;
 }
 
@@ -1203,7 +1198,7 @@ footer {
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
-  .hero-fullvh { height: 100svh !important; }
+  .hero-fullvh { height: calc(100svh - 98px) !important; }
   .scroll-indicator { display: none; }
   .home-intro {
     grid-template-columns: 1fr;
