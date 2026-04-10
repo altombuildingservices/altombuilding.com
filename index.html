@@ -76,22 +76,51 @@
   </div>
 
   <!-- HOME GALLERY PREVIEW -->
-  <div class="home-gallery">
-    <div class="masonry-row">
-      <a href="/gallery-kitchen" class="masonry-tile masonry-large">
-        <div class="img-placeholder" style="width:100%;height:100%;">kitchen photo</div>
-        <div class="masonry-label">Kitchen</div>
-      </a>
-      <div class="masonry-col">
-        <a href="/gallery-bathroom" class="masonry-tile masonry-small">
-          <div class="img-placeholder" style="width:100%;height:100%;">bathroom photo</div>
-          <div class="masonry-label">Bathroom</div>
-        </a>
-        <a href="/gallery-shower" class="masonry-tile masonry-small">
-          <div class="img-placeholder" style="width:100%;height:100%;">shower photo</div>
-          <div class="masonry-label">Shower</div>
-        </a>
-      </div>
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:240px;gap:10px;padding:0 12% 64px;background:white;">
+
+    <!-- Row 1: wide left, two stacked right -->
+    <a href="/gallery-kitchen" style="grid-column:1/span 4;grid-row:1/span 2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">kitchen photo</div>
+      <div class="masonry-label">Kitchen</div>
+    </a>
+    <a href="/gallery-bathroom" style="grid-column:5/span 2;grid-row:1;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">bathroom photo</div>
+      <div class="masonry-label">Bathroom</div>
+    </a>
+    <a href="/gallery-shower" style="grid-column:5/span 2;grid-row:2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">shower photo</div>
+      <div class="masonry-label">Shower</div>
+    </a>
+
+    <!-- Row 2: two stacked left, wide right -->
+    <a href="/gallery-living-room" style="grid-column:1/span 2;grid-row:3;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">living room photo</div>
+      <div class="masonry-label">Living Room</div>
+    </a>
+    <a href="/gallery-home-office" style="grid-column:1/span 2;grid-row:4;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">home office photo</div>
+      <div class="masonry-label">Home Office</div>
+    </a>
+    <a href="/gallery-entertainment" style="grid-column:3/span 4;grid-row:3/span 2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">entertainment wall photo</div>
+      <div class="masonry-label">Entertainment Wall</div>
+    </a>
+
+    <!-- Row 3: equal thirds -->
+    <a href="/gallery-closet" style="grid-column:1/span 2;grid-row:5/span 2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">closet photo</div>
+      <div class="masonry-label">Closet</div>
+    </a>
+    <a href="/gallery-laundry" style="grid-column:3/span 2;grid-row:5/span 2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">laundry photo</div>
+      <div class="masonry-label">Laundry</div>
+    </a>
+    <a href="/gallery-outdoor" style="grid-column:5/span 2;grid-row:5/span 2;overflow:hidden;position:relative;display:block;">
+      <div class="img-placeholder" style="position:absolute;inset:0;width:100%;height:100%;">outdoor living photo</div>
+      <div class="masonry-label">Outdoor Living</div>
+    </a>
+
+  </div>
     </div>
     <div class="masonry-row">
       <div class="masonry-col">
