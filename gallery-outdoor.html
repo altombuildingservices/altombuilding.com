@@ -47,7 +47,25 @@
     .sg-p4 { grid-column: 1 / span 2; grid-row: 3 / span 2; }
     .sg-p5 { grid-column: 3 / span 2; grid-row: 3 / span 2; }
     .sg-p6 { grid-column: 5 / span 2; grid-row: 3 / span 2; }
+
+    @media (max-width: 768px) {
+      .sg-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: 200px !important;
+        padding: 16px 16px 40px !important;
+        gap: 8px !important;
+      }
+      .sg-p1, .sg-p2, .sg-p3, .sg-p4, .sg-p5, .sg-p6 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
   </style>
+  <!-- Security headers -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'none'; frame-ancestors 'none';">
 </head>
 <body>
 
