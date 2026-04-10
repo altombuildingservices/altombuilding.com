@@ -873,6 +873,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-company-text p {
@@ -892,6 +894,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-why-item {
