@@ -800,9 +800,11 @@ footer {
 
 .about-meet-grid {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-profile-card {
@@ -840,6 +842,8 @@ footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+.about-bio { max-width: 420px; }
 
 .about-bio h2 {
   font-family: 'Raleway', sans-serif;
