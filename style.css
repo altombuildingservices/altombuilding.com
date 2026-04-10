@@ -1333,3 +1333,53 @@ footer {
   .photo-thirds { height: auto; flex-direction: column; }
   .photo-thirds .photo-tile { height: 200px; flex: none; }
 }
+
+/* ── GALLERY SUB-NAV ── */
+.gallery-sub-nav {
+  background: white;
+  border-bottom: 1px solid #eef0f3;
+  padding: 0 12%;
+  position: sticky;
+  top: 0; /* sits below fixed header if needed, adjust if header is fixed */
+}
+
+.gallery-sub-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery-sub-nav-inner::-webkit-scrollbar { display: none; }
+
+.gsn-link {
+  display: inline-block;
+  padding: 16px 22px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.gsn-link:hover {
+  color: var(--blue);
+}
+
+.gsn-link.gsn-active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+@media (max-width: 900px) {
+  .gallery-sub-nav { padding: 0; }
+  .gsn-link { padding: 14px 14px; font-size: 11px; letter-spacing: 0.08em; }
+}
