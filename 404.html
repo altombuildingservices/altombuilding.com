@@ -50,7 +50,7 @@
         <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
       </ul>
     </nav>
-    <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-modern').classList.toggle('nav-open');this.classList.toggle('is-open')">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -115,5 +115,11 @@
     &copy; 2026 ALTOM Building Services &nbsp;|&nbsp; +1 (602) 807-2301 &nbsp;|&nbsp; tom@altombuilding.com
   </footer>
 
+  <script>
+    document.getElementById('nav-hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-modern').classList.toggle('nav-open');
+      this.classList.toggle('is-open');
+    });
+  </script>
 </body>
 </html>
