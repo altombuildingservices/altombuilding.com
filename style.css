@@ -1214,7 +1214,7 @@ footer {
 }
 
 .home-intro-wrapper {
-  border-bottom: 1px solid #eee;
+  border-bottom: none;
 }
 
 /* ── HOME GALLERY ── */
@@ -1223,10 +1223,10 @@ footer {
   flex-direction: column;
   gap: 8px;
   background: var(--white);
-  padding: 0 12%;
+  padding: 0 12% 64px;
 }
 
-.home-gallery .masonry-row { height: 460px; }
-.home-gallery .masonry-thirds { height: 400px; }
+.home-gallery .masonry-row { height: 560px; }
+.home-gallery .masonry-thirds { height: 480px; }
 .home-gallery .masonry-label { opacity: 0; }
 .home-gallery .masonry-tile:hover .masonry-label { opacity: 1; }
