@@ -1234,7 +1234,7 @@ footer {
 
 /* ── PHOTO GRID (gallery page) ── */
 .photo-grid {
-  padding: 0 8% 64px;
+  padding: 0 12% 64px;
   display: flex;
   flex-direction: column;
   gap: 10px;
