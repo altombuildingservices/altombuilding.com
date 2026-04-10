@@ -1223,6 +1223,8 @@ footer {
   flex-direction: column;
   gap: 3px;
   background: #e8e8e8;
+  padding: 0 3%;
 }
 
-.home-gallery .masonry-label { opacity: 1; }
+.home-gallery .masonry-label { opacity: 0; }
+.home-gallery .masonry-tile:hover .masonry-label { opacity: 1; }
