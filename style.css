@@ -1125,9 +1125,12 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  padding: 80px 72px;
+  padding: 96px 10%;
   border-bottom: 1px solid #eee;
-  align-items: start;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .home-intro-label {
@@ -1136,23 +1139,25 @@ footer {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--blue);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .home-intro-left h2 {
   font-family: 'Raleway', sans-serif;
-  font-size: clamp(20px, 2.2vw, 30px);
+  font-size: clamp(18px, 2vw, 26px);
   font-weight: 600;
   color: var(--text);
-  line-height: 1.45;
+  line-height: 1.55;
   letter-spacing: -0.01em;
+  text-align: justify;
 }
 
 .home-intro-right p {
-  font-size: 15px;
-  line-height: 1.85;
+  font-size: 14px;
+  line-height: 1.9;
   color: var(--text-light);
   margin-bottom: 36px;
+  text-align: justify;
 }
 
 .home-intro-btns {
@@ -1205,4 +1210,10 @@ footer {
     gap: 32px;
     padding: 48px 24px;
   }
+  .home-intro-left h2,
+  .home-intro-right p { text-align: left; }
+}
+
+.home-intro-wrapper {
+  border-bottom: 1px solid #eee;
 }
