@@ -65,6 +65,20 @@
     .p10 { grid-column: 1 / span 2; grid-row: 7 / span 2; }
     .p11 { grid-column: 3 / span 2; grid-row: 7 / span 2; }
     .p12 { grid-column: 5 / span 2; grid-row: 7 / span 2; }
+
+    @media (max-width: 768px) {
+      .photo-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: 200px !important;
+        padding: 16px 16px 40px !important;
+        gap: 8px !important;
+      }
+      .p01, .p02, .p03, .p04, .p05, .p06,
+      .p07, .p08, .p09, .p10, .p11, .p12 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
