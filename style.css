@@ -674,7 +674,7 @@ footer {
 .gallery-intro {
   text-align: center;
   padding: 52px 48px 36px;
-  border-bottom: 1px solid #eee;
+  background: white;
 }
 
 .gallery-intro-label {
@@ -1238,12 +1238,14 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: white;
 }
 
 .photo-row {
   display: flex;
   gap: 10px;
   height: 480px;
+  align-items: stretch;
 }
 
 .photo-thirds {
@@ -1255,12 +1257,23 @@ footer {
   flex-direction: column;
   gap: 10px;
   flex: 1;
+  min-height: 0;
 }
 
 .photo-tile {
   flex: 1;
   overflow: hidden;
   position: relative;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+}
+
+.photo-tile .img-placeholder,
+.photo-tile img {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
 }
 
 .photo-tile .img-placeholder {
