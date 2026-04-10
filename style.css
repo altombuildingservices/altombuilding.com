@@ -1241,22 +1241,35 @@ footer {
   background: white;
 }
 
+/* All rows use the same 2-column grid: 2fr 1fr */
 .photo-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 10px;
   height: 480px;
-  align-items: stretch;
 }
 
+/* Reversed row: 1fr 2fr */
+.photo-row-reverse {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  height: 480px;
+}
+
+/* Equal thirds row */
 .photo-thirds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
   height: 380px;
 }
 
+/* Column of 2 stacked tiles */
 .photo-col {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
-  flex: 1;
 }
 
 .photo-tile {
@@ -1280,22 +1293,8 @@ footer {
   display: block;
 }
 
-/* Column tiles: explicit 50/50 split */
-.photo-col .photo-tile {
-  flex: 0 0 calc(50% - 5px);
-  height: calc(50% - 5px);
-}
-
-/* Large tiles fill full row height */
-.photo-large {
-  flex: 2;
-}
-
-/* Thirds tiles fill full row height */
-.photo-thirds .photo-tile {
-  flex: 1;
-  height: 100%;
-}
+.photo-tile:hover .img-placeholder,
+.photo-tile:hover img { transform: scale(1.03); transition: transform 0.4s ease; }
 
 .photo-tile .img-placeholder {
   width: 100%;
