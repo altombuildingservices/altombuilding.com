@@ -1125,7 +1125,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  padding: 80px 6%;
+  padding: 80px 3%;
   border-bottom: 1px solid #eee;
   align-items: center;
   max-width: 1400px;
