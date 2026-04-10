@@ -220,14 +220,12 @@ a { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid #e8e8e8;
+  border-top: none;
 }
 
 .service-item {
   padding: 36px 3%;
-  border-right: 1px solid #e8e8e8;
 }
-
-.service-item:last-child { border-right: none; }
 
 .service-item h3 {
   font-size: 13px;
