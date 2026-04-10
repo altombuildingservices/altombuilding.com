@@ -1124,8 +1124,8 @@ footer {
 .home-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 120px;
-  padding: 120px 12%;
+  gap: 80px;
+  padding: 80px 6%;
   border-bottom: 1px solid #eee;
   align-items: center;
   max-width: 1400px;
@@ -1149,7 +1149,6 @@ footer {
   color: var(--text);
   line-height: 1.55;
   letter-spacing: -0.01em;
-  text-align: justify;
 }
 
 .home-intro-right p {
