@@ -1221,10 +1221,12 @@ footer {
 .home-gallery {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  background: #e8e8e8;
-  padding: 0 3%;
+  gap: 8px;
+  background: var(--white);
+  padding: 0 12%;
 }
 
+.home-gallery .masonry-row { height: 320px; }
+.home-gallery .masonry-thirds { height: 260px; }
 .home-gallery .masonry-label { opacity: 0; }
 .home-gallery .masonry-tile:hover .masonry-label { opacity: 1; }
