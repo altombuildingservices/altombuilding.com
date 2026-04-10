@@ -892,6 +892,7 @@ footer {
   color: var(--text-light);
   margin-bottom: 16px;
   text-align: justify;
+  text-align-last: center;
 }
 
 /* Why choose us */
@@ -936,6 +937,7 @@ footer {
   line-height: 1.7;
   color: var(--text-light);
   text-align: justify;
+  text-align-last: center;
 }
 
 /* CTA Banner */
