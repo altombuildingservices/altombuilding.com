@@ -1216,3 +1216,13 @@ footer {
 .home-intro-wrapper {
   border-bottom: 1px solid #eee;
 }
+
+/* ── HOME GALLERY ── */
+.home-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: #e8e8e8;
+}
+
+.home-gallery .masonry-label { opacity: 1; }
