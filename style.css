@@ -1260,7 +1260,6 @@ footer {
 }
 
 .photo-tile {
-  flex: 1;
   overflow: hidden;
   position: relative;
 }
@@ -1281,16 +1280,21 @@ footer {
   display: block;
 }
 
-/* Force equal height split in columns */
+/* Column tiles: explicit 50/50 split */
 .photo-col .photo-tile {
-  flex: 1 1 0;
-  min-height: 0;
+  flex: 0 0 calc(50% - 5px);
+  height: calc(50% - 5px);
 }
 
-/* Thirds row tiles need explicit height too */
+/* Large tiles fill full row height */
+.photo-large {
+  flex: 2;
+}
+
+/* Thirds tiles fill full row height */
 .photo-thirds .photo-tile {
-  flex: 1 1 0;
-  min-height: 0;
+  flex: 1;
+  height: 100%;
 }
 
 .photo-tile .img-placeholder {
