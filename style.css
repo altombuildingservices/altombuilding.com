@@ -1606,8 +1606,12 @@ footer {
     min-height: 480px;
   }
 
+  .hero-modern-img {
+    object-position: 20% center;
+  }
+
   .hero-modern-overlay {
-    padding: 40px 24px 80px;
+    padding: 40px 24px 120px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto;
   }
