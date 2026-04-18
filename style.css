@@ -1612,20 +1612,29 @@ footer {
   }
 
   .hero-modern-overlay {
-    padding: 40px 24px 120px;
+    padding: 40px 24px 160px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto;
   }
 
   .hero-modern-content { grid-column: 1; grid-row: 1; padding: 0; }
-  .hero-callouts { grid-column: 1; grid-row: 2; }
+  .hero-callouts { grid-column: 1; grid-row: 2; gap: 10px; }
   .hero-cta-group { grid-column: 1; grid-row: 3; flex-direction: column; min-width: unset; }
+
+  .hero-callout-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  .hero-callout-title { font-size: 13px; }
 
   .hero-modern-content h1 {
     font-size: clamp(32px, 8vw, 48px);
   }
 
   .hero-callout-text { display: none; }
+  .homepage-scroll { display: none; }
 
   /* ── HOME INTRO ── */
   .home-intro-wrapper { padding: 0; }
