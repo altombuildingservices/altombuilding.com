@@ -601,6 +601,7 @@ footer {
   .gallery-grid { grid-template-columns: 1fr; }
   .nav-modern a { font-size: 11px; padding: 8px 6px; }
   .hero-modern { height: 320px; }
+  .hero-modern-content { padding: 0; }
 }
 
 /* ── CONTACT HERO ── */
