@@ -1617,7 +1617,7 @@ footer {
     grid-template-rows: 1fr auto auto;
   }
 
-  .hero-modern-content { grid-column: 1; grid-row: 1; }
+  .hero-modern-content { grid-column: 1; grid-row: 1; padding: 0; }
   .hero-callouts { grid-column: 1; grid-row: 2; }
   .hero-cta-group { grid-column: 1; grid-row: 3; flex-direction: column; min-width: unset; }
 
