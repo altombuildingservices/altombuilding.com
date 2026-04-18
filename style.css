@@ -142,13 +142,17 @@ a { text-decoration: none; color: inherit; }
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.7) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 72px 72px 100px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  padding: 72px 72px 80px;
+  gap: 32px;
 }
 
 .hero-modern-content {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  align-self: start;
   max-width: 700px;
 }
 
@@ -171,20 +175,14 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
   color: var(--white);
   line-height: 1.05;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   letter-spacing: -0.02em;
-}
-
-.hero-cta-group {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .cta-ghost {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   border: 2px solid rgba(255,255,255,0.8);
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -201,11 +199,14 @@ a { text-decoration: none; color: inherit; }
   border-color: white;
 }
 
-/* ── HERO CALLOUTS ── */
+/* ── HERO CALLOUTS — bottom-left, stacked vertically ── */
 .hero-callouts {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 14px;
+  align-self: end;
 }
 
 .hero-callout {
@@ -240,6 +241,18 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   color: rgba(255,255,255,0.65);
+}
+
+/* ── HERO CTAs — bottom-right, stacked vertically ── */
+.hero-cta-group {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: end;
+  align-items: stretch;
+  min-width: 180px;
 }
 
 .cta-modern {
@@ -1594,18 +1607,18 @@ footer {
 
   .hero-modern-overlay {
     padding: 40px 24px 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
   }
 
-  .hero-modern-content {
-    max-width: 100%;
-  }
+  .hero-modern-content { grid-column: 1; grid-row: 1; }
+  .hero-callouts { grid-column: 1; grid-row: 2; }
+  .hero-cta-group { grid-column: 1; grid-row: 3; flex-direction: column; min-width: unset; }
 
   .hero-modern-content h1 {
     font-size: clamp(32px, 8vw, 48px);
   }
 
-  .hero-cta-group { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .hero-callouts { gap: 16px; }
   .hero-callout-text { display: none; }
 
   /* ── HOME INTRO ── */
